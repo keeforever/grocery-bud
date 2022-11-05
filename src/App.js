@@ -68,7 +68,7 @@ function App() {
     setEditIndex(index);
   };
 
-  // Local Storage
+  //add Local Storage
   const localSave = () => {
     if (JSON.parse(localStorage.getItem("list")).length > 0) {
       setlistItems(JSON.parse(localStorage.getItem("list")));
@@ -84,7 +84,6 @@ function App() {
   // useEffect
   useEffect(() => {
     localStorage.setItem("list", JSON.stringify(listItems));
-    console.log(JSON.parse(localStorage.getItem("list")));
     const errAlert = setTimeout(() => {
       setAlertInfo({ state: false, info: "" });
     }, 2000);
